@@ -1,6 +1,6 @@
 import React from "react";
 import TextComponent from "./TextComponent";
-import { TimeButton,CheckButton } from "./ButtonComponent";
+import { MinButton,HourButton,CheckButton,TimeButton } from "./ButtonComponent";
 export const TimeRangeComponent = () => {
   return (
     <div>
@@ -8,8 +8,8 @@ export const TimeRangeComponent = () => {
       <div style={{ fontWeight: "700", fontSize: "16px", lineHeight: "22px" }}>
         <TextComponent label="FN" />
       </div>
-      <TimeButton />
-      <TimeButton />
+      <HourButton />
+      <MinButton />
       <TimeButton />
       <div
         style={{
@@ -21,8 +21,8 @@ export const TimeRangeComponent = () => {
       >
         <TextComponent label="to" />
       </div>
-      <TimeButton />
-      <TimeButton />
+      <HourButton />
+      <MinButton />
       <TimeButton />  
       <CheckButton />
       <TextComponent styleProps={{opacity:"0.5"}}
@@ -32,8 +32,8 @@ export const TimeRangeComponent = () => {
       <div style={{ fontWeight: "700", fontSize: "16px", lineHeight: "22px" }}>
         <TextComponent label="AN" />
       </div>
-      <TimeButton />
-      <TimeButton />
+      <HourButton />
+      <MinButton />
       <TimeButton />
       <div
         style={{
@@ -45,8 +45,8 @@ export const TimeRangeComponent = () => {
       >
         <TextComponent label="to" />
       </div>
-      <TimeButton />
-      <TimeButton />
+      <HourButton />
+      <MinButton />
       <TimeButton />  
       <CheckButton />
       <TextComponent styleProps={{opacity:"0.5"}}

@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import TextComponent from "./TextComponent";
 import {InputComponent,SelectComponent } from "./DropDownComponent";
 import DateComponent from "./DateComponent";
 import { Button1,Button2 } from "./ButtonComponent";
 
 export const SubDateComponent = () => {
+  const[sub,setSub]=useState(['19QSA011','19HSM002','19ASR008','19CTR105','19MNS202'])
   return (
     <div
       style={{
@@ -20,7 +21,7 @@ export const SubDateComponent = () => {
       }}
     >
       <div style={{marginTop:"22px"}}>
-        <SelectComponent />
+        <SelectComponent data={sub}/>
       </div>
       <div style={{ marginLeft: "30px",marginBottom:"px" }}>
         <TextComponent label="" />

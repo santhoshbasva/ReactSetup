@@ -34,3 +34,40 @@ const Image = () => {
 };
 
 export default Image;
+
+export const Bin = () => {
+  return (
+    <div style={{ position: "relative"}}>
+    <div style={{
+      width:"19px",
+      height:"19px",
+      marginLeft:"150px",
+      marginTop:"25px",
+      display:"flex",
+      direction:"row"
+    }}>
+    <img src="https://i.ibb.co/jVpb71G/Vectorpen.png"/>
+   <div style={{marginLeft:"20px"}}> <img src="https://i.ibb.co/sVjxfbf/Vectorbin.png"/></div>
+    </div>
+    </div>
+  )
+}
+export const Tic = () => {
+  return (
+    <div style={{ position: "relative"}}>
+    <div style={{ marginTop:"17px",
+          marginLeft:"210px"}}>
+    <img src="https://i.ibb.co/spfFJZT/Vectortic.png"/>
+    </div>
+    </div>
+
+  )
+}
+export const Filter = () => {
+  return (
+    <div style={{marginTop:"15px",marginLeft:"15px"}}>
+      <img src="https://i.ibb.co/K2tR9XX/Vector-Filter.png"/>
+    </div>
+  )
+}
+

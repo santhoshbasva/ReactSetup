@@ -6,7 +6,7 @@ export const Footer = () => {
       <footer
       style={{display:"flex",fontFamily: "Nunito",
       direction:"row",
-      marginTop:"45%",opacity:"0.5"}}>
+      marginTop:"1%",opacity:"0.5"}}>
             <p style={{padding:"5px 260px"}}>Conditions of use  sale </p>
             <p style={{padding:"5px"}}>Privacy notice</p>
             <p style={{padding:"5px 260px"}}>Powered By Incresco</p>

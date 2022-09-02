@@ -6,7 +6,9 @@ export const NewSchedule = () => {
   return (
     <div>
         <Header/>
+        <React.StrictMode>
         <MainWrapperComponent/>
+        </React.StrictMode>
         <Footer/>
     </div>
   )

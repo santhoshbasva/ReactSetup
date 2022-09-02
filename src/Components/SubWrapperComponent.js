@@ -1,15 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import TextComponent from "./TextComponent";
-import BigDdComponent from "./BigDdComponent";
+
 import {
-  BranchSelectComponent,
+  SelectComponent,
   DropDownComponent1,
-  DepartmentSelectComponent,
 } from "./DropDownComponent";
 import { SubDateComponent } from "./SubDateComponent";
 import { TimeRangeComponent } from "./TimeRangeComponent";
 
 export const SubWrapperComponent = () => {
+  const [branch,setBranch]=useState(['B.E','B.TECH'])
+  const [dept,setDept]=useState([['EEE','ECE','CSE','MECH'],'IT'])
+  const [exam,setExam]=useState(['Internal','Model','Semester'])
   return (
     <div style={{ padding: "37px 51px 50px", backgroundColor: "#FBFBFB" }}>
       <div
@@ -27,11 +29,11 @@ export const SubWrapperComponent = () => {
       >
         <div>
           <TextComponent label="Branch" />
-          <BranchSelectComponent />
+          <SelectComponent data={branch } style={{width:"340px"}}/>
         </div>
         <div style={{ marginLeft: "30px" }}>
           <TextComponent label="Department" />
-          <DepartmentSelectComponent />
+          <SelectComponent data={branch[0] && dept[0]} style={{width:"340px"}}/>
         </div>
         <div style={{ marginLeft: "30px" }}>
           <TextComponent label="Semester" />
@@ -40,7 +42,7 @@ export const SubWrapperComponent = () => {
       </div>
       <div style={{ marginTop: "30px" }}>
         <TextComponent label="Exam Type" />
-        <BigDdComponent />
+        <SelectComponent data={exam} style={{width:"96.9%"}}/>
       </div>
       <div style={{ marginTop: "30px" }}>
         <TextComponent label="Time Range" />
