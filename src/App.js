@@ -5,7 +5,7 @@ import NewSchedule from "./Pages/NewSchedule";
 const App = () =>{
     return (
         <div>
-           <NewList/>
+           <NewSchedule/>
         </div>
     )
 }

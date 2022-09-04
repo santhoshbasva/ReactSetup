@@ -9,9 +9,26 @@ import { SubDateComponent } from "./SubDateComponent";
 import { TimeRangeComponent } from "./TimeRangeComponent";
 
 export const SubWrapperComponent = () => {
-  const [branch,setBranch]=useState(['B.E','B.TECH'])
-  const [dept,setDept]=useState([['EEE','ECE','CSE','MECH'],'IT'])
+  const [branch, setBranch] = useState([
+    { name: "select", id: "0" },
+    { name: "B.E", id: "1" },
+    { name: "B.Tech", id: "2" },])
+  const [dept, setDept] = useState([
+      { name: "I.T", id: "2" },
+      { name: "C.S.E", id: "1" },
+      { name: "EEE", id: "1" },
+      { name: "ECE", id: "1" },
+      { name: "MECH", id: "1" },
+     
+  ]);
   const [exam,setExam]=useState(['Internal','Model','Semester'])
+  const [selectedDept, setSelectedDept] = useState([
+    { name: "select", id: "0" },
+  ]);
+
+  const onChangeSelectBranch = (data) => {
+    const selectedValue = data.target.value;
+    setSelectedDept(dept.filter((selectDept) => selectDept.id === selectedValue))}
   return (
     <div style={{ padding: "37px 51px 50px", backgroundColor: "#FBFBFB" }}>
       <div
@@ -29,11 +46,13 @@ export const SubWrapperComponent = () => {
       >
         <div>
           <TextComponent label="Branch" />
-          <SelectComponent data={branch } style={{width:"340px"}}/>
+          <SelectComponent data={branch }
+          onChange={onChangeSelectBranch} style={{width:"340px"}}/>
         </div>
         <div style={{ marginLeft: "30px" }}>
           <TextComponent label="Department" />
-          <SelectComponent data={branch[0] && dept[0]} style={{width:"340px"}}/>
+          <SelectComponent data={selectedDept} 
+          style={{width:"340px"}}/>
         </div>
         <div style={{ marginLeft: "30px" }}>
           <TextComponent label="Semester" />

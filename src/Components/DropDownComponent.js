@@ -15,10 +15,13 @@ export const DropDownComponent1 = (props) => {
     </div>
   );
 };
-export const InputComponent = (props) => {
+export const InputComponent = () => {
+ 
   return (
     <div>
-      <input
+      <select
+        value={sName}
+        onChange={handleChange}
         style={{
           background: "#FFFFFF",
           border: "1px solid #E8E8EA",
@@ -27,17 +30,18 @@ export const InputComponent = (props) => {
           height: "53px",
           marginTop: "7px",
           backgroundColor: "#F2F2F2",
-          ...props.style
          
         }}
-        type="text"
-      ></input>
+        
+      ></select>
+       <Subjectname sName={sName} />
     </div>
   );
 };
 
 export const SelectComponent = (props) => {
-  const {data}=props;
+  const {data, onChange = () => null } = props;
+
   return (
     <div>
       <select
@@ -51,8 +55,11 @@ export const SelectComponent = (props) => {
           opacity: "0.8",
           ...props.style
         }}
+        onChange={onChange}
       >
-        {data.map((item)=>{return <option value="">{item}</option>})}
+         {data.map((item) => {
+          return <option value={item.id}>{item?.name || item}</option>;
+        })}
       </select>
     </div>
   );
