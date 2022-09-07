@@ -3,8 +3,7 @@ import { ButtonComponent1 } from "./ButtonComp";
 import EditIcon from "./svg/EditIcon";
 import TickIcon from "./svg/TickIcon";
 import DeleteIcon from "./svg/DeleteIcon";
-
-
+import { useRouter } from 'next/router'
 
 
 export const AllocationPageComp = (props) => {
@@ -13,8 +12,8 @@ export const AllocationPageComp = (props) => {
     deletePress = () => null,
     editPress = () => null,
     branch = "B.E",
-    department = "I.T",
-    semester = "3",
+    department = "ECE",
+    semester = "2",
     subject = "5",
     lab = "2",
     ExamType = "Semester",
@@ -22,6 +21,9 @@ export const AllocationPageComp = (props) => {
     marginTop = 0,
     isCreateCard = false,
   } = props;
+
+ 
+
   return (
     <div style={{ marginTop }}>
       {isCreateCard ? (
@@ -37,7 +39,9 @@ export const AllocationPageComp = (props) => {
             justifyContent: "center",
           }}
         >
-          <ButtonComponent1 marginLeft={0} marginTop={0} />
+          <ButtonComponent1 
+          //onClick={Home}
+          marginLeft={0} marginTop={0}/>
         </div>
       ) : (
         <div
@@ -54,7 +58,7 @@ export const AllocationPageComp = (props) => {
                 <DeleteIcon onClick={deletePress} marginLeft={22} />
               </div>
             </div>
-            <div style={styles.createdLabel}>Created on 01/08/2022 11:00AM</div>
+            <div style={styles.createdLabel}>Created on 06/09/2022 12:00PM</div>
             <div
               style={{
                 ...styles.rowSpaceBetween,
@@ -210,5 +214,6 @@ const styles = {
     fontSize: 16,
     lineHeight: "22px",
     color: "#5375E2",
+    height:"15px"
   },
 };

@@ -30,7 +30,7 @@ const InputComponent = (props) => {
         placeholder,
         label,
         onChange,
-    } = props
+         } = props
     return (
         <>
             {label && <StyledInputLabel>{label}</StyledInputLabel>}

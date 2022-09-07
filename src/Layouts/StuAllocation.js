@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { ScheduleButton } from '../Components/CreateButton'
 
 const StyledMainContainer = styled.div`
     padding: 35px 122px 89px;
@@ -25,7 +26,7 @@ export const StuAllocation = () => {
         <StyledArrow src="https://i.ibb.co/RBRPtj0/Vector-Arrow.png"/>
         <StyledTitle> Semester Exam - BE EEE SEM 3</StyledTitle>
     </div>
-    
+    <ScheduleButton/>
     </StyledMainContainer>
 
     </div>

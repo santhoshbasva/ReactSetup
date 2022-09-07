@@ -1,78 +1,83 @@
-import React from 'react'
-import styled from "styled-components";
-import TextComponent from '../Components/TextComponent';
-
-const StyledHeaderContainer = styled.div`
-  padding: 1% 8% 0.5% 3%;
-  display: flex;
-  flex-direction: row;
-  background: #5375e2;
-`;
-
-const CollegeLogo = styled.img`
-  height: 52px;
-  width: 53px;
-`;
-
-const StyledHeaderText1 = styled(TextComponent)`
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  color: #ffffff;
-  margin-left: 3%;
-  margin-bottom: 3px;
-  flex-direction: row;
-`;
-
-const StyledHeaderText2 = styled(TextComponent)`
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #ffffff;
-  margin-left: 3%;
-`;
-const Div1 = styled.div`
-  width: 100%;
-`;
-
-const Div2 = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-left: 45%;
-`;
-
-const UserLogo = styled.img`
-  height: 30px;
-  width: 30px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-`;
-const UserName = styled(TextComponent)`
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  color: #ffffff;
-  margin-top: 17px;
-  margin-bottom: 14px;
-  margin-left: 11px;
-`;
+import React from "react";
+import TextComponent from "../Components/TextComponent";
 
 const Header = () => {
   return (
-    <StyledHeaderContainer>
-        <div>
-        <CollegeLogo src="https://i.ibb.co/RQV2JZV/college-Logo.png" alt="LOGO"/>
+    <div>
+    <div
+      style={{
+        //Header Box
+        padding: "8px",
+        display: "flex",
+        flexDirection: "row",
+        backgroundColor: "#5375e2",
+        width: "100%",
+        margin:"0"
+      }}
+    >
+      <div
+        style={{
+          //Clg Logo
+          width: "50px",
+          height: "50px",
+          padding: "21px 27px 23px",
+        }}
+      >
+        <img src="https://i.ibb.co/5M3FrMX/image-2.png" />
+      </div>
+      <div>
+        <div
+          style={{
+            //Clg name
+            color: "white",
+            fontFamily: "Nunito",
+            fontStyle: "Bold",
+            fontSize: "16px",
+            lineHeight: "22px",
+            marginLeft: "41px",
+            marginTop: "16px",
+          }}
+        >
+          <TextComponent label="SRI KRISHNA COLLEGE OF ENGINEERING AND TECHNOLOGY" />
         </div>
-        <Div1 >
-          <StyledHeaderText1 label="SRI KRISHNA COLLEGE OF ENGINEERING AND TECHNOLOGY"/>
-          <StyledHeaderText2 label="Exam Scheduler"/>
-        </Div1>
-        <Div2>
-          <UserLogo src="https://i.ibb.co/wgKdx86/healthicons-ui-user-profile.png"/>
-          <UserName label = "Waseem"/>
-        </Div2>
-    </StyledHeaderContainer>
-  )
-}
+        <div
+          style={{
+            //Exam Scheduler
+            color: "white",
+            fontFamily: "Nunito",
+            fontStyle: "Bold",
+            fontSize: "32px",
+            lineHeight: "41px",
+            lineHight: "100%",
+            marginLeft: "41px",
+            marginTop: "3px",
+          }}
+        >
+          <TextComponent label="Exam Scheduler" />
+        </div>
+      </div>
+      <div
+        style={{
+          //Waseem
+          display:"flex",
+          flexDirection:"row",
+          fontWeight: "700",
+          fontSize: "20px",
+          lineHeight: "27px",
+          color: "#ffffff",
+          marginTop:"30px",
+          marginLeft:"650px",
 
-export default Header
+        }}
+      >
+        <div style={{marginBottom:"7px",marginRight:"12px",fontFamily: "Nunito"}}>
+        <img src="https://i.ibb.co/wBgCczS/healthicons-ui-user-profile-User-Prof.png" /></div>
+        <TextComponent label="Waseem" />
+      </div>
+    
+    </div>
+      </div>
+  );
+};
+
+export default Header;

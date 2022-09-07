@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage"
 import { NewList } from "../pages/NewList";
 import NewSchedule from "../pages/NewSchedule"
 import { StudentAllocation } from "../pages/StudentAllocation";
+//import { Font } from '../src/font'
 
 
 const App = () => {

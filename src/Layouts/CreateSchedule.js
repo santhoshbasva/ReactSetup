@@ -7,6 +7,7 @@ import TextComponent from '../Components/TextComponent'
 import Button from '../Components/Button'
 import { FormData } from '../FormData'
 import SubjectLabComponent from '../Components/SubjectLabComponent'
+import Pop from '../Components/PopupComponent'
 
 const StyledMainContainer = styled.div`
     padding: 35px 122px 89px;
@@ -334,7 +335,8 @@ const CreateSchedule = () => {
                         justifyContent: 'flex-end',
                     }}
                 >
-                    <SaveButton label="Save" />
+                    {/* <SaveButton label="Save" /> */}
+                    <Pop/>
                     <div />
                 </div>
             </StyledMainContainer>

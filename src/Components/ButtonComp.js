@@ -1,11 +1,18 @@
 import React from "react";
 import TextComponent from "./TextComponent";
+import { useRouter } from 'next/router'
+
 export const ButtonComponent1 = (props) => {
     const { type, marginTop = 90, marginLeft = 90 } = props;
+    const Router = useRouter()
+    const Home = () => {
+        Router.push('/HomePage')
+    }
     return (
       <div>
         <div>
           <button
+            onclick={Home}
             type={type}
             style={{
               marginTop,
@@ -13,6 +20,7 @@ export const ButtonComponent1 = (props) => {
               backgroundColor: "#5375e2",
               borderRadius: "10px",
               borderColor: "white",
+              border:"#5375e2"
             }}
           >
             <div
