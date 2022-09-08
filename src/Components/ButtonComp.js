@@ -2,17 +2,20 @@ import React from "react";
 import TextComponent from "./TextComponent";
 import { useRouter } from 'next/router'
 
+
+
 export const ButtonComponent1 = (props) => {
     const { type, marginTop = 90, marginLeft = 90 } = props;
     const Router = useRouter()
-    const Home = () => {
-        Router.push('/HomePage')
+    const AC = () => {
+      Router.push('/HomePage')
     }
+
     return (
       <div>
         <div>
           <button
-            onclick={Home}
+           onClick={AC}
             type={type}
             style={{
               marginTop,
@@ -26,7 +29,7 @@ export const ButtonComponent1 = (props) => {
             <div
               style={{ fontSize: "20px", color: "white", padding: "15px 27px" }}
             >
-              <TextComponent label="+ Create New" />
+              <TextComponent label="+ Create New"/>
             </div>
           </button>
         </div>

@@ -10,7 +10,6 @@ export const AllocationPageComp = (props) => {
   const {
     heading = "",
     deletePress = () => null,
-    editPress = () => null,
     branch = "B.E",
     department = "ECE",
     semester = "2",
@@ -20,10 +19,14 @@ export const AllocationPageComp = (props) => {
     isCompleted = false,
     marginTop = 0,
     isCreateCard = false,
-  } = props;
+    } = props;
 
- 
+    const Router = useRouter()
+    const AB = () => {
+        Router.push('/NewSchedule')
+    }
 
+   
   return (
     <div style={{ marginTop }}>
       {isCreateCard ? (
@@ -40,8 +43,8 @@ export const AllocationPageComp = (props) => {
           }}
         >
           <ButtonComponent1 
-          //onClick={Home}
-          marginLeft={0} marginTop={0}/>
+          marginLeft={0} 
+          marginTop={0}/>
         </div>
       ) : (
         <div
@@ -54,7 +57,7 @@ export const AllocationPageComp = (props) => {
             <div style={styles.rowSpaceBetween}>
               <div style={styles.headingText}>{heading}</div>
               <div style={styles.row}>
-                <EditIcon onClick={editPress} />
+                <EditIcon onClick={AB} />
                 <DeleteIcon onClick={deletePress} marginLeft={22} />
               </div>
             </div>

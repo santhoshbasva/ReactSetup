@@ -29,6 +29,8 @@ margin-bottom: 8px;
 const StyledTextButton = styled.div`
 margin-left: 33px;
 margin-top: 3px;
+border:;
+
 `;
 const Router = useRouter()
 const New = () => {
@@ -51,31 +53,31 @@ const New = () => {
 
 export default CreateButton;
 
-export const ScheduleButton = () => {
+// export const ScheduleButton = () => {
 
-const StyledScheduleButton = styled.div`
-background: #5375e2;
-border: 5px solid #5375e2;
-border-radius: 10px;
-margin: 0px 121px 0px 100px;
-font-weight: 400;
-font-size: 20px;
-line-height: 27px;
-color: #ffffff;
-padding: 8px 23px 15px 21px;
-display: flex;
-flex-direction: row;
-`;
-const StyledTextButton = styled.div`
-margin-left: 33px;
-margin-top: 3px;
-`;
-  return (
-  <>
-    <StyledScheduleButton>
-    <StyledTextButton>Schedules</StyledTextButton>
+// const StyledScheduleButton = styled.div`
+// background: #5375e2;
+// border: 5px solid #5375e2;
+// border-radius: 10px;
+// margin: 0px 121px 0px 100px;
+// font-weight: 400;
+// font-size: 20px;
+// line-height: 27px;
+// color: #ffffff;
+// padding: 8px 23px 15px 21px;
+// display: flex;
+// flex-direction: row;
+// `;
+// const StyledTextButton = styled.div`
+// margin-left: 33px;
+// margin-top: 3px;
+// `;
+//   return (
+//   <>
+//     <StyledScheduleButton>
+//     <StyledTextButton>Schedules</StyledTextButton>
 
-    </StyledScheduleButton>
-  </>
-  )
-}
+//     </StyledScheduleButton>
+//   </>
+//   )
+// }
