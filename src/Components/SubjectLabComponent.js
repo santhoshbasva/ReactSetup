@@ -38,7 +38,6 @@ const FNANButtonActive = styled(Button)`
     background: #5375e2;
 `
 
-
 const DropIcon = () => {
     return (
         <svg
@@ -57,7 +56,6 @@ const DropIcon = () => {
 }
 
 const SubjectLabComponent = (props) => {
-  // 
     const { details, setDetails, label } = props
     const handleChangeDate = (event, index) => {
         let clonedArray = [...details]
@@ -188,7 +186,7 @@ const SubjectLabComponent = (props) => {
                                     />
                                 </div>
                             </>
-                        ) : (
+                          ):(
                             <>
                                 <div
                                     style={{

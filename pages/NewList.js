@@ -5,13 +5,21 @@ import AllocationPage from '../src/Layouts/Allocation'
 import { Font } from '../src/font'
 
 const NewList = () => {
-  return (
-    <div>
-    <Font />
-    <Header />
-    <AllocationPage />
-    <Footer />
-    </div>
-  )
+    return (
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+            }}
+        >
+            <Font />
+
+            <Header />
+            <AllocationPage />
+
+            <Footer />
+        </div>
+    )
 }
 export default NewList

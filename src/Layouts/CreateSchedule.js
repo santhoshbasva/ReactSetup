@@ -7,7 +7,7 @@ import TextComponent from '../Components/TextComponent'
 import { FormData } from '../FormData'
 import SubjectLabComponent from '../Components/SubjectLabComponent'
 import Pop from '../Components/PopupComponent'
-import { useRouter } from 'next/router'
+import {useRouter } from 'next/router'
 
 const StyledMainContainer = styled.div`
     padding: 35px 122px 89px;
@@ -135,9 +135,10 @@ const CreateSchedule = () => {
         setSubjectDetails(FormData?.[selectedDep]?.[sem - 1]?.[0]?.subjects)
         setLabDetails(FormData?.[selectedDep]?.[sem - 1]?.[0]?.labs)
     }
-    const Router = useRouter()
-    const HM = () => {
-        Router.push('/NewSchedule')
+   
+    const Router=useRouter()
+    const AB =()=>{
+        Router.push('/HomePage')
     }
     return (
         <>
@@ -150,9 +151,10 @@ const CreateSchedule = () => {
                     }}
                 >
                     <StyledArrow
-                        onClick={HM}
+                        onClick={AB}
                         src="https://i.ibb.co/RBRPtj0/Vector-Arrow.png"
                         alt="Arrow"
+                        
                     />
                     <StyledTitle>Create new schedule</StyledTitle>
                 </div>
