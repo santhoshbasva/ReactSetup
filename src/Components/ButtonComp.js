@@ -8,7 +8,7 @@ export const ButtonComponent1 = (props) => {
     const { type, marginTop = 90, marginLeft = 90 } = props;
     const Router = useRouter()
     const AC = () => {
-      Router.push('/HomePage')
+      Router.push('/NewSchedule')
     }
 
     return (

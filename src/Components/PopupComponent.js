@@ -29,7 +29,6 @@ const  Pop=() => {
                         border: '#5375E2',
                     }}
                 >
-                    {' '}
                     Save
                 </button>
             }

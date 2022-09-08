@@ -174,7 +174,7 @@ const styles = {
   },
   statusText: {
     fontFamily: "Nunito Sans",
-    fontWeight: 700,
+    fontWeight: 500,
     fontSize: 20,
     lineHeight: "27px",
     color: "#FFFFFF",

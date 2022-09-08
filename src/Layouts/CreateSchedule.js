@@ -4,10 +4,10 @@ import CustomDropDown from '../Components/CustomDropDown'
 import Wrapper from '../Components/WrapperComponent'
 import InputComponent from '../Components/InputComponent'
 import TextComponent from '../Components/TextComponent'
-import Button from '../Components/Button'
 import { FormData } from '../FormData'
 import SubjectLabComponent from '../Components/SubjectLabComponent'
 import Pop from '../Components/PopupComponent'
+import { useRouter } from 'next/router'
 
 const StyledMainContainer = styled.div`
     padding: 35px 122px 89px;
@@ -75,42 +75,9 @@ const StyledCheckBox = styled(InputComponent)`
     margin-right: 13px;
     color: #767676;
 `
-const StyledSubjectLabel = styled(TextComponent)`
-    background: #f2f2f2;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #aba9ae;
-    padding: 20px 0px 20px 12.8px;
-    margin-top: 34px;
-`
-
-const FNANButton = styled(Button)`
-    border: 1px solid #5375e2;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 21px 22px;
-    color: #5375e2;
-    margin-top: 30px;
-`
 const StyledInputText3 = styled(StyledInputText1)`
     margin-bottom: 30px;
 `
-const SaveButton = styled(Button)`
-    border: 1px solid #5375e2;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 10.5px 49px;
-    color: #ffffff;
-    margin-top: 56px;
-    background: #5375e2;
-`
-
 const DropIcon = () => {
     return (
         <svg
@@ -127,7 +94,6 @@ const DropIcon = () => {
         </svg>
     )
 }
-
 const CreateSchedule = () => {
     const [branch, setBranch] = useState(FormData?.branchanddep || [])
     const [selectedBranch, setSelectedBranch] = useState(branch[0] || {})
@@ -148,7 +114,7 @@ const CreateSchedule = () => {
         setExamType(FormData?.[selectedDep]?.[event.target.value - 1])
     }
     let AMPMOption = ['AM', 'PM']
-    const [selectedAmPmDropDown, setSelectedAmPmDropDown] = useState(AMPMOption[0])
+    const [selectedAmPmDropDown, setSelectedAmPmDropDown] = useState(AMPMOption[0,1])
 
     const setBranchs = (option) => {
         setSelectedBranch(option)
@@ -169,7 +135,10 @@ const CreateSchedule = () => {
         setSubjectDetails(FormData?.[selectedDep]?.[sem - 1]?.[0]?.subjects)
         setLabDetails(FormData?.[selectedDep]?.[sem - 1]?.[0]?.labs)
     }
-    const setDateHanlde = (option) => {}
+    const Router = useRouter()
+    const HM = () => {
+        Router.push('/NewSchedule')
+    }
     return (
         <>
             <StyledMainContainer>
@@ -181,6 +150,7 @@ const CreateSchedule = () => {
                     }}
                 >
                     <StyledArrow
+                        onClick={HM}
                         src="https://i.ibb.co/RBRPtj0/Vector-Arrow.png"
                         alt="Arrow"
                     />
@@ -327,7 +297,6 @@ const CreateSchedule = () => {
                         label="Lab"
                     />
                 </StyledWrapper>
-
                 <div
                     style={{
                         display: 'flex',
@@ -335,7 +304,6 @@ const CreateSchedule = () => {
                         justifyContent: 'flex-end',
                     }}
                 >
-                    {/* <SaveButton label="Save" /> */}
                     <Pop/>
                     <div />
                 </div>

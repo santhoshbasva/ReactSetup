@@ -11,7 +11,7 @@ const AllocationPage = () => {
       completed:true
     },
     {
-      heading: "BE ECE SEM2",
+      heading: "B.E ECE SEM2",
       branch: "B.E",
       department: "ECE",
       semester: "2",
@@ -21,7 +21,7 @@ const AllocationPage = () => {
       completed: true,
     },
     {
-      heading: "BE EEE SEM 2",
+      heading: "B.E EEE SEM 2",
       branch: "B.E",
       department: "EEE",
       semester: "2",
@@ -31,7 +31,7 @@ const AllocationPage = () => {
       completed: true,
     },
     {
-      heading: "BE MECH SEM2",
+      heading: "B.E MECH SEM2",
       branch: "B.E",
       department: "MECH",
       semester: "2",
@@ -41,7 +41,7 @@ const AllocationPage = () => {
       completed: false,
     },
     {
-      heading: "BE CSE SEM 2",
+      heading: "B.E CSE SEM 2",
       branch: "B.E",
       department: "CSE",
       semester: "2",
@@ -51,8 +51,8 @@ const AllocationPage = () => {
       completed: false,
     },
     {
-      heading: "BTECH IT SEM2",
-      branch: "B.E",
+      heading: "B.TECH IT SEM2",
+      branch: "B.TECH",
       department: "IT",
       semester: "2",
       subject: "4",
@@ -71,10 +71,11 @@ const AllocationPage = () => {
     <>
       <div
         style={{
-          marginLeft: "1100px",
+          marginLeft: "1120px",
           display: "flex",
           flexDirection: "row",
-          marginBottom: "-3px",
+          marginTop: "20px",
+          marginBottom:"-2%"
         }}
       >
         <span
@@ -86,7 +87,7 @@ const AllocationPage = () => {
         </span>
         <CheckBox cardDetails={cardDetails} setCardDetails={setCardDetails}/>
         <span style={{ marginRight: "10px", marginLeft: "10px",marginTop:""}}>Filter</span>
-        <FilterIcon/>
+        <FilterIcon />
       </div>
 
       <div

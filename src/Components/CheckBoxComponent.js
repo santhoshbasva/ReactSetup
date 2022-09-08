@@ -3,7 +3,7 @@ export const CheckBox = (props) => {
     return (
       <div
       >
-        <input type="checkbox" onClick={()=>{
+        <input type="checkbox" onChange={()=>{
           const value = props.cardDetails.filter(val=>{
             return val.completed === true;
           })

@@ -30,7 +30,7 @@ const NoSchedule = () => {
       < NoScheduleImageText
         label="There are no schedules get started by creating schedules"
       />
-      <CreateButton/>
+      <CreateButton />
     </div>
   );
 };
