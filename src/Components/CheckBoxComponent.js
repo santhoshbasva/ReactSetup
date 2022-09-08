@@ -1,13 +1,15 @@
 import React from "react";
-export const CheckBox = ({ style={
-    marginLeft: "20%",
-    marginTop: "19px",
-  }}) => {
+export const CheckBox = (props) => {
     return (
       <div
-       style={{style}}
       >
-        <input type="checkbox" name="FN" value="FN" />
+        <input type="checkbox" onClick={()=>{
+          const value = props.cardDetails.filter(val=>{
+            return val.completed === true;
+          })
+          props.setCardDetails(value)
+
+        }}/>
       </div>
     );
   };

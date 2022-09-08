@@ -99,5 +99,6 @@ const  Pop=() => {
     </div>
 
     )
-                    }
- export default Pop
+}
+
+export default Pop

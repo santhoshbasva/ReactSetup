@@ -8,6 +8,7 @@ const AllocationPage = () => {
   const [cardDetails, setCardDetails] = useState([
     {
       createCard: true,
+      completed:true
     },
     {
       heading: "BE ECE SEM2",
@@ -83,9 +84,9 @@ const AllocationPage = () => {
         >
           Show Allocated
         </span>
-        <CheckBox style={{}} />
-        <span style={{ marginRight: "10px", marginLeft: "10px"}}>Filter</span>
-        <FilterIcon />
+        <CheckBox cardDetails={cardDetails} setCardDetails={setCardDetails}/>
+        <span style={{ marginRight: "10px", marginLeft: "10px",marginTop:""}}>Filter</span>
+        <FilterIcon/>
       </div>
 
       <div
