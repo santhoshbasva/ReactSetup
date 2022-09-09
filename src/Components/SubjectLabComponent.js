@@ -64,8 +64,10 @@ const SubjectLabComponent = (props) => {
     }
     const handleChangeFN = (index) => {
         let clonedArray = [...details]
-        if (clonedArray[index].isNoon === '') clonedArray[index].isNoon = false
-        else if (clonedArray[index].isNoon === false)
+        if (clonedArray[index].isNoon === '') {
+            if (label === 'FN') clonedArray[index].isNoon = false
+            else clonedArray[index].isNoon = true
+        } else if (clonedArray[index].isNoon === false && label === 'AN')
             clonedArray[index].isNoon = true
         else clonedArray[index].isNoon = false
         setDetails(clonedArray)
@@ -157,13 +159,19 @@ const SubjectLabComponent = (props) => {
                                     <FNANButton
                                         label="FN"
                                         onClick={(event) => {
-                                            handleChangeFN(index)
+                                            handleChangeFN(index, 'FN')
                                             console.log(details)
                                         }}
                                     />
                                 </div>
                                 <div style={{ width: '6.1%' }}>
-                                    <FNANButton label="AN" />
+                                    <FNANButton
+                                        label="AN"
+                                        onClick={(event) => {
+                                            handleChangeFN(index, 'AN')
+                                            console.log(details)
+                                        }}
+                                    />
                                 </div>
                             </>
                         ) : item.isNoon ? (
@@ -174,19 +182,25 @@ const SubjectLabComponent = (props) => {
                                         width: '6.1%',
                                     }}
                                 >
-                                    <FNANButton label="FN" />
+                                    <FNANButton
+                                        label="FN"
+                                        onClick={(event) => {
+                                            handleChangeFN(index, 'FN')
+                                            console.log(details)
+                                        }}
+                                    />
                                 </div>
                                 <div style={{ width: '6.1%' }}>
                                     <FNANButtonActive
                                         label="AN"
                                         onClick={(event) => {
-                                            handleChangeFN(index)
+                                            handleChangeFN(index, 'AN')
                                             console.log(details)
                                         }}
                                     />
                                 </div>
                             </>
-                          ):(
+                        ) : (
                             <>
                                 <div
                                     style={{
@@ -197,17 +211,22 @@ const SubjectLabComponent = (props) => {
                                     <FNANButtonActive
                                         label="FN"
                                         onClick={(event) => {
-                                            handleChangeFN(index)
+                                            handleChangeFN(index, 'FN')
                                             console.log(details)
                                         }}
                                     />
                                 </div>
                                 <div style={{ width: '6.1%' }}>
-                                    <FNANButton label="AN" />
+                                    <FNANButton
+                                        label="AN"
+                                        onClick={(event) => {
+                                            handleChangeFN(index, 'AN')
+                                            console.log(details)
+                                        }}
+                                    />
                                 </div>
                             </>
                         )}
-
                     </div>
                 )
             })}
@@ -216,4 +235,3 @@ const SubjectLabComponent = (props) => {
 }
 
 export default SubjectLabComponent
-

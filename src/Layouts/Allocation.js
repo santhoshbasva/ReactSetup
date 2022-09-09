@@ -2,69 +2,9 @@ import React, { useState } from 'react'
 import { AllocationPageComp } from '../Components/AllocationComponents'
 import { CheckBox } from '../Components/CheckBoxComponent'
 import FilterIcon from '../Components/svg/FilterIcon'
-
+import { ListData } from '../ListData'
 const AllocationPage = () => {
-    const [cardDetails, setCardDetails] = useState([
-        {
-            createCard: true,
-            completed: true,
-        },
-        {
-            heading: 'B.E ECE SEM2',
-            branch: 'B.E',
-            department: 'ECE',
-            semester: '2',
-            subject: '5',
-            lab: '2',
-            ExamType: 'Semester',
-            completed: true,
-            id: 0,
-        },
-        {
-            heading: 'B.E EEE SEM 2',
-            branch: 'B.E',
-            department: 'EEE',
-            semester: '2',
-            subject: '5',
-            lab: '2',
-            ExamType: 'Semester',
-            completed: true,
-            id: 1,
-        },
-        {
-            heading: 'B.E MECH SEM2',
-            branch: 'B.E',
-            department: 'MECH',
-            semester: '2',
-            subject: '3',
-            lab: '0',
-            ExamType: 'Semester',
-            completed: false,
-            id: 2,
-        },
-        {
-            heading: 'B.E CSE SEM 2',
-            branch: 'B.E',
-            department: 'CSE',
-            semester: '2',
-            subject: '4',
-            lab: '0',
-            ExamType: 'Internal',
-            completed: false,
-            id: 3,
-        },
-        {
-            heading: 'B.TECH IT SEM2',
-            branch: 'B.TECH',
-            department: 'IT',
-            semester: '2',
-            subject: '4',
-            lab: '0',
-            ExamType: 'Model',
-            completed: true,
-            id: 4,
-        },
-    ])
+    const [cardDetails, setCardDetails] = useState(ListData)
 
     const [filterCardDetails, setFilterCardDetails] = useState(cardDetails)
 
@@ -191,8 +131,8 @@ const FilterComponent = ({
                     position: 'absolute',
                     right: 6,
                     top: 30,
-                    backgroundColor: 'whitesmoke',
-                    borderRadius: 10,
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: '5px',
                     display: visible ? 'block' : 'none',
                 }}
             >
