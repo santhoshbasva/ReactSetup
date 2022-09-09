@@ -8,6 +8,7 @@ import { FormData } from '../FormData'
 import SubjectLabComponent from '../Components/SubjectLabComponent'
 import Pop from '../Components/PopupComponent'
 import {useRouter } from 'next/router'
+import Link from 'next/link'
 
 const StyledMainContainer = styled.div`
     padding: 35px 122px 89px;
@@ -150,12 +151,14 @@ const CreateSchedule = () => {
                         marginBottom: '20px',
                     }}
                 >
+                <Link href="/">
                     <StyledArrow
-                        onClick={AB}
+                        
                         src="https://i.ibb.co/RBRPtj0/Vector-Arrow.png"
                         alt="Arrow"
                         
                     />
+                    </Link>
                     <StyledTitle>Create new schedule</StyledTitle>
                 </div>
                 <StyledWrapper>
