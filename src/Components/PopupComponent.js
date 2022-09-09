@@ -53,7 +53,7 @@ const  Pop=() => {
                         marginBottom: "16px"
                     }}
                 >
-                    <a href="HomePage">Go Home</a>
+                    <a href="NewList">Go Home</a>
                 </span>
                 <div style={{color:"black",width:"680px",marginTop:"45px",marginLeft:"165px"}}>
                  <h2>BE EEE SEM3 schedule was successfully created.</h2>

@@ -4,6 +4,7 @@ export const ListData = [
             completed: true,
         },
         {
+            id: 0,
             heading: 'B.E ECE SEM2',
             branch: 'B.E',
             department: 'ECE',
@@ -12,9 +13,10 @@ export const ListData = [
             lab: '2',
             ExamType: 'Semester',
             completed: true,
-            id: 0,
+            
         },
         {
+            id: 1,
             heading: 'B.E EEE SEM 2',
             branch: 'B.E',
             department: 'EEE',
@@ -23,9 +25,10 @@ export const ListData = [
             lab: '2',
             ExamType: 'Semester',
             completed: true,
-            id: 1,
+            
         },
         {
+            id: 2,
             heading: 'B.E MECH SEM2',
             branch: 'B.E',
             department: 'MECH',
@@ -34,9 +37,10 @@ export const ListData = [
             lab: '0',
             ExamType: 'Semester',
             completed: false,
-            id: 2,
+            
         },
         {
+            id: 3,
             heading: 'B.E CSE SEM 2',
             branch: 'B.E',
             department: 'CSE',
@@ -45,9 +49,10 @@ export const ListData = [
             lab: '0',
             ExamType: 'Internal',
             completed: false,
-            id: 3,
+            
         },
         {
+            id: 4,
             heading: 'B.TECH IT SEM2',
             branch: 'B.TECH',
             department: 'IT',
@@ -56,6 +61,6 @@ export const ListData = [
             lab: '0',
             ExamType: 'Model',
             completed: true,
-            id: 4,
+            
         },
     ]
