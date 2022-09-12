@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div style={{width:"100%",backgroundColor:"#FBFBFB"}}>
+    <div style={{width:"100%",backgroundColor:"#FBFBFB",marginTop:"47%"}}>
       <footer
       style={{display:"flex",fontFamily: "Nunito",
       direction:"row",opacity:"0.5",justifyContent:'center',alignItems:'center'}}>
