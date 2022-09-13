@@ -40,3 +40,21 @@ export const TableData= [
         subname:"Control System"
     },
 ]
+export const LabData= [
+    {
+        id:0,
+        sn:"1",
+        date:"05/08/2022",
+        session:"FN",
+        code:"19QSA011",
+        subname:"Measurement and Instrumentation"
+    },
+    {
+        id:1,
+        sn:"2",
+        date:"07/08/2022",
+        session:"FN",
+        code:"19HSM002",
+        subname:"Electrical Machines"
+    },
+]

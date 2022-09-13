@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import TextComponent from './TextComponent'
-import { TableData } from '../TableData'
+import { TableData,LabData } from '../TableData'
 export const StuWrapper = () => {
     return (
-        <div style={{ padding: '35px 122px 185px' }}>
+        <div style={{ padding: '35px 122px 105px' }}>
             <div style={{ flexDirection: 'row', display: 'flex' }}>
                 <img
                     style={{
@@ -63,32 +63,61 @@ export const ScheduleAndAllocation = () => {
 export const StuSubWrppaer = () => {
     return (
         <div style={{ padding: '20px 58px 78px', border: '1px solid #D6D5D7' }}>
-           <h3> Semester Schedules</h3>
-            <TableBorder />
+           <h3>Semester Schedule</h3>
+            <SemTable />
+            <h3>Lab Schedule</h3>
+            <LabTable/>
         </div>
     )
 }
 
-export const TableBorder = () => {
-    return (
-        <div
-            style={{ padding: '20px 62px', border: '1px solid #000000' }}
-        >  
-        <Table/>
-        
-        </div>
-    )
-}
-export const Table =()=>{
+
+export const SemTable =()=>{
   return(
-    <table style={{justifyContent:"space-between"}}>
-    <tr style={{color:"#5375E2",alignContent:"space-evenly"}}>
-      <th>S.No</th>
-      <th>Date</th>
-      <th>Session</th>
-      <th>Course Code</th>
-      <th>Subject Name</th>
+<div  style={{ padding: '20px 62px', border: '1px solid #000000', }}>
+  <table style={{width:"100%",textAlign:"center",}}>
+    <tr style={{color:"#5375E2",fontWeight:"600"}}>
+      <td><TextComponent label="S.No" /></td>
+      <td><TextComponent label="Date" /></td>
+      <td><TextComponent label="Session" /></td>
+      <td><TextComponent label="Course Code" /></td>
+      <td><TextComponent label="Subject Name" /></td>
     </tr>
+    {TableData.map((semSchedule)=>(
+    <tr style={{padding:"25px",fontWeight:"600"}}>
+      <td>{semSchedule.sn}</td>
+      <td>{semSchedule.date}</td>
+      <td>{semSchedule.session}</td>
+      <td>{semSchedule.code}</td>
+      <td>{semSchedule.subname}</td>
+    </tr>
+    ))}
   </table>
+</div>
+  )
+}
+
+export const LabTable =()=>{
+  return(
+    <div  style={{ padding: '20px 62px', border: '1px solid #000000' }}>
+    <table style={{width:"100%",textAlign:"center",}}>
+    <tr style={{color:"#5375E2",fontWeight:"600",border: "1px solid black",}}>
+      <td><TextComponent label="S.No" /></td>
+      <td><TextComponent label="Date" /></td>
+      <td><TextComponent label="Session" /></td>
+      <td><TextComponent label="Course Code" /></td>
+      <td><TextComponent label="Subject Name" /></td>
+    </tr>
+    {LabData.map((semSchedule)=>(
+    <tr style={{padding:"25px",fontWeight:"600"}}>
+      <td>{semSchedule.sn}</td>
+      <td>{semSchedule.date}</td>
+      <td>{semSchedule.session}</td>
+      <td>{semSchedule.code}</td>
+      <td>{semSchedule.subname}</td>
+    </tr>
+    ))}
+  </table>
+  </div>
   )
 }
