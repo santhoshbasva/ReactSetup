@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { ScheduleAndAllocation } from './StudentScheduleComp'
 import { StudentData } from '../StudentData'
 import TextComponent from './TextComponent'
@@ -35,6 +35,7 @@ export const StudentAllocationComp = () => {
 }
 
 export const AlloWrap = () => {
+  const[subj,setSubj]=useState(['Subject1','Subject2','Subject3','Subject4','Subject5'])
     return (
         <div
             style={{
@@ -45,11 +46,7 @@ export const AlloWrap = () => {
         >
             <div style={{ display: 'flex', direction: 'row' }}>
                 <select style={{ padding: '6px 24px' }}>
-                    <option>Subject 1</option>
-                    <option>Subject 2</option>
-                    <option>Subject 3</option>
-                    <option>Subject 4</option>
-                    <option>Subject 5</option>
+                  <SelectComponent data ={subj}/>
                 </select>
                 <div
                     style={{
@@ -136,7 +133,7 @@ export const Invigilation = () => {
 export const StudentTable =()=>{
   return(
 <div  style={{ padding: '20px 62px', border: '1px solid #000000',backgroundColor:"white", }}>
-  <table style={{width:"100%",textAlign:"center",}}>
+  <table style={{width:"100%",textAlign:"center",borderSpacing:"30px"}}>
     <tr style={{color:"#5375E2",fontWeight:"600"}}>
       <td><TextComponent label="S.No" /></td>
       <td><TextComponent label="Reg No" /></td>
@@ -144,8 +141,8 @@ export const StudentTable =()=>{
       <td><TextComponent label="Department" /></td>
       <td><TextComponent label="Seat No" /></td>
     </tr>
-    {StudentData.map((index)=>(
-    <tr style={{padding:"25px",fontWeight:"400",fontSize:"16px",lineHeight:"116%"}}>
+    {StudentData.map((index,sNo)=>(
+    <tr style={{fontWeight:"400",fontSize:"16px",lineHeight:"116%"}}>
       <td>{index.sn}</td>
       <td>{index.regno}</td>
       <td>{index.name}</td>
@@ -158,3 +155,22 @@ export const StudentTable =()=>{
 </div>
   )
 }
+
+
+export const SelectComponent = (props) => {
+  const {data, onChange = () => null } = props;
+
+  return (
+    <div>
+      <select
+        
+        onChange={onChange}
+      >
+         {data.map((item) => {
+          return <option value={item.subj}>{item.subj}</option>;
+        })}
+      </select>
+    </div>
+  );
+};
+
